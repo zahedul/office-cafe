@@ -19,6 +19,8 @@ RUN rm -f /var/lib/apt/list/*
 RUN useradd -ms /bin/bash officecafe
 USER officecafe
 
+COPY wait-for.sh /home/officecafe/wait-for.sh
+
 RUN mkdir /home/officecafe/src
 WORKDIR /home/officecafe/src
 COPY ./src /home/officecafe/src
