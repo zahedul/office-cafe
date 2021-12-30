@@ -10,7 +10,7 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install pipenv
 
 COPY Pipfile* /tmp/
-RUN cd /tmp && pipenv lock --keep-outdated --requirements > requirements.txt
+RUN cd /tmp && pipenv lock --dev --keep-outdated --requirements > requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
 RUN apt-get clean

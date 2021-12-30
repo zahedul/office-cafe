@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 .idea/
 postgres-data/
+.DS_Store
